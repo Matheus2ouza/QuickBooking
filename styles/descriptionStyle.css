@@ -1,0 +1,100 @@
+/* descriptionStyle.css */
+
+/* Reset de margens e padding, e definição da altura mínima para o body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima da página para garantir que o rodapé fique na parte inferior */
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgb(31, 109, 174, 0.8);
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    width: 80%;
+    margin: 0 60px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.logo {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-right: 15px;
+}
+@font-face {
+    font-family: 'Noir Pro';
+    src: url('../fonts/noir-pro-semi-bold.ttf') format('truetype');
+}
+
+h1 {
+    color: #0e3047;
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Noir Pro', serif;
+    font-weight: normal;
+}
+
+/* Seções e containers */
+section {
+    padding: 20px 0;
+    flex: 1; /* Faz o conteúdo da seção expandir para preencher o espaço disponível */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: rgb(31, 109, 174, 0.8);;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+    
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #0e3047;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

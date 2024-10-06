@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/loginStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+	<link rel="icon" href="../img/LOGO + TITULO vetorizada sem fundo.png">
+
+    <title>QuickBooking</title>
+</head>
+<body>
+    <img src="../img/LOGO + TITULO vetorizada sem fundo.png" class="logo" alt="">
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Criar Conta</h1>
+			<input type="text" class="inp-user" placeholder="Usuário" />
+			<span class="error-message username-error"></span>
+			<input type="email" class="inp-email" placeholder="Email" />
+			<span class="error-message email-error"></span>
+			<input type="password" class="input-password" placeholder="Senha"/>
+			<span class="error-message pswd-error"></span>
+            <a href="#"><i class="bi bi-eye eye-password"></i></a>
+			<span class="password-info">ℹ️</span>
+			<button class="submit-button">Cadastrar</button>
+		</form>
+	</div>
+	
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Iniciar Sessão</h1>
+			<input type="email" class="email-login" placeholder="Email" />
+			<span class="error-message email-errorLogin"></span>
+			<input type="password" class="input-password" id="input-password" placeholder="Senha"/>
+			<span class="error-message pswd-errorLogin"></span>
+            <a href="#"><i class="bi bi-eye eye-password"></i></a>
+			<a href="#" class="forgot">Esqueceu a senha?</a>
+			<button class="submit-buttonLogin">Entrar</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bem Vindo!</h1>
+				<p>Você já possui uma conta?</p>
+				<button class="ghost" id="signIn">Entrar</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Bom Revê-lo</h1>
+				<p>Ainda não possui uma conta conosco?</p>
+				<button class="ghost" id="signUp">Cadastre-se</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="password-tooltip" id="passwordTooltip">
+	Senha deve ter pelo menos 9 caracteres, incluindo letras, números e caracteres especiais.
+</div>
+
+<div class="loading-background"></div>
+
+<div class="div-one">
+	<div class="div-container active">
+		<span class="span-overlay show"><img src="../img/LOGO + TITULO vetorizada sem fundo.png"></span>
+	</div>
+</div>
+
+<footer>
+    <p><a href="/page/description.html" class="footer-link">Saiba mais sobre o QuickBooking</a></p>
+</footer>
+<script type="module" src="../src/uiEffects.js"></script>
+<script type="module" src="../src/singUp.js"></script>
+<script type="module" src="../src/login.js"></script>
+</body>
+</html>
