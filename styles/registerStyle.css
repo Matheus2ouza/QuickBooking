@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #1f6dae;
+    padding: 1rem;
+    margin-bottom: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    font-size: 1.4rem;
+    border-bottom: 3px solid transparent;
+}
+
+nav ul li a.active {
+    border-bottom: 3px solid #0e3047;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.section.active {
+    display: block;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: -5px;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}
+
+h2 span {
+    display: inline-block;
+    width: 400px;
+}
+
+small {
+    font-size: 0.7rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type="text"],
+textarea {
+    width: 400px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #616161;
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+.document {
+    display: inline-block;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.radio-label {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+button {
+    border-radius: 5px;
+    border: 1px solid #0e3047;
+    background-color: #0e3047;
+    color: #fff;
+    font-size: 13.5px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.error {
+    border: 2px solid #ff416c !important;
+}

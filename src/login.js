@@ -17,7 +17,7 @@ function displayErrors(errorElement, message, inputError, inputError2) {
 async function registerUser(userData) {
     try {
         // Envia os dados do usuário (username, email e password )para a API
-        const response = await fetch('https://apiquickbooking.ddns.net:8443/loginUser', {
+        const response = await fetch('https://ap-iquickbooking.vercel.app/loginUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

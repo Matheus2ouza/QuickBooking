@@ -10,8 +10,8 @@ passwordInput = document.querySelector('.input-password');
 
 // Função para exibir mensagens de erro e marcar o campo como erro
 function displayError(errorElement, message, inputError) {
-    errorElement.textContent = message;  // Define a mensagem de erro
-    inputError.classList.add('error');    // Adiciona a classe de erro ao campo
+    errorElement.textContent = message;
+    inputError.classList.add('error');
 }
 
 // Função para redefinir o campo de entrada ao focar nele
@@ -26,7 +26,7 @@ function resetField(errorElement, inputField) {
 async function registerUser(userData) {
     try {
         // Envia os dados do usuário (username, email e password )para a API
-        const response = await fetch('https://apiquickbooking.ddns.net:8443/register', {
+        const response = await fetch('https://ap-iquickbooking.vercel.app/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -35,11 +35,13 @@ async function registerUser(userData) {
         });
 
         // Verifica se o registro foi bem-sucedido
+        const responseData = await response.json(); // Converte a resposta de erro para JSON
+        
         if (response.status === 201) {
-            return true;
+            const userId = responseData.userId;
+            return userId;
         } else {
-            const errorResponse = await response.json(); // Converte a resposta de erro para JSON
-            handleRegistrationError(errorResponse); // Lida com o erro
+            handleRegistrationError(responseData); // Lida com o erro
             return false;
         }
     } catch (error) {
@@ -53,7 +55,7 @@ async function registerUser(userData) {
 function handleRegistrationError(errorResponse) {
     if (errorResponse.message.includes('username')) {
         displayError(usernameError, 'Usuário já está sendo usado', usernameInput); // Erro de nome de usuário
-    } else if (errorResponse.message.includes('email')) {
+    } else if (errorResponse.message.includes('Email')) {
         displayError(emailError, 'Email já está sendo usado', emailInput); // Erro de email
     } else {
         throw new Error('Erro ao registrar usuário'); 
@@ -130,11 +132,12 @@ async function validateForm() {
             password: passwordValue,
         };
 
-        const registrationSuccess = await registerUser(userData); // Tenta registrar o usuário
+        const userId = await registerUser(userData); // Tenta registrar o usuário
         
         //caso o cadastro na API retorne true ele redireciona para a proxima pagina
-        if (registrationSuccess) {
-            window.location.href = '/page/dashboard.html';
+        if (userId) {
+            sessionStorage.setItem('userId', userId)
+            window.location.href = '/page/register.html';
         }
     }
 }

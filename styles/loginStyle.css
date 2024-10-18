@@ -389,15 +389,18 @@ input {
 }
 
 .loading-background {
-    position: fixed; /* Para preencher a tela toda */
+    position: fixed; /* Mude de absolute para fixed */
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw; /* Utilize 100vw e 100vh para garantir que cubra toda a tela */
+    height: 100vh; /* Utilize 100vh para cobrir toda a altura da janela */
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 998;
-    display: none;
+    display: none; /* Exiba-o conforme necessário via JavaScript */
+    align-items: center; /* Para centralizar conteúdo, se houver */
+    justify-content: center; /* Para centralizar conteúdo, se houver */
 }
+
 
 .loading-background.show,
 .div-container.show{
